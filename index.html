@@ -1,31 +1,59 @@
 <!-- <!DOCTYPE html> -->
 <html>
-<title>Belajar html css js</title>
-<head>
+    <head>
+    <title>TEST CODE by Fikran Jabbar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         #title {
-            color: #FF0095
+            color: #001aff
         }
         .buttonStyle {
             background-color: rgb(191, 255, 16); color: blue;
             cursor: pointer;
         }
+        .i-am-centered { margin: auto;  text-align: center; text-align: -webkit-center;}
+        body {
+            display:flex; flex-direction:column; justify-content:center;
+            min-height:100vh;
+        }
+
     </style>
 
 </head>
 
     <body>
-        <center style="margin-top: 30vh;">
-            <h1 id="title">WELCOME TO FIRST MY WEBSITE</h1>
+        <div class="i-am-centered">
+            <h1 id="title">Hello, World!"</h1>
         
-            <button type="button" class="buttonStyle" onclick="myButton()">Klik aku donk mas</button>
-        </center>
+            <button id="klik" type="button" class="btn btn-primary" style="display:block;" onclick="myButton()">Klik Saya</button>
+            <button id="kembali" type="button" class="btn btn-primary" style="display:none;" onclick="myButtonBack()">Kembali</button>
+
+            <img id="bigpic" src="bigpic" style="display:none; margin: 10px;width: 50vh;" />
+        </div>
+        
         
 
         <script>
             function myButton(){
-                document.getElementById('title').innerHTML = 'YES SAYA PUNYA WEBSITE';
-                // alert('TOMBOL BERFUNGSI');
+                document.getElementById('title').innerHTML = 'TOMBOL TELAH DI TEKAN!';
+                document.getElementById('title').style.color = 'red';
+                var pic = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Adev-logo.jpg/1200px-Adev-logo.jpg"
+                document.getElementById('bigpic').src = pic.replace('300x300', '200x200');
+                document.getElementById('bigpic').style.display = 'block';
+                document.getElementById('kembali').style.display = 'block';
+                document.getElementById('klik').style.display = 'none';
+
+            }
+            function myButtonBack() {
+                document.getElementById('klik').style.display = 'block';
+                document.getElementById('kembali').style.display = 'none';
+                document.getElementById('bigpic').style.display = 'none';
+                document.getElementById('title').innerHTML = 'Klik Saya';
+                document.getElementById('title').style.color = 'blue';
             }
         </script>
     </body>
