@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<title>Belajar html css js</title>
+<head>
+    <style>
+        #title {
+            color: #FF0095
+        }
+        .buttonStyle {
+            background-color: rgb(191, 255, 16); color: blue;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+    <body>
+        <center style="margin-top: 30vh;">
+            <h1 id="title">WELCOME TO FIRST MY WEBSITE</h1>
+        
+            <button type="button" class="buttonStyle" onclick="myButton()">Klik aku donk mas</button>
+        </center>
+        
+
+        <script>
+            function myButton(){
+                document.getElementById('title').innerHTML = 'YES SAYA PUNYA WEBSITE';
+                // alert('TOMBOL BERFUNGSI');
+            }
+        </script>
+    </body>
+
+</html>
